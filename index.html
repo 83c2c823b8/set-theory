@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel="stylesheet" href="set1.css" type="text/css">
+  </head>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" }},
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { matchFontHeight: false },
+    displayAlign: "left",
+    displayIndent: "2em"
+  });
+</script>
+</html>
 
+<html lang="ja">
+  
+  <body>
+    <div class="tab-wrap">
+    <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">ZFC</label>
+      <div class="tab-content">
+      </div>
+   
+      <input id="TAB-02" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-02">集合論</label>
+      <div class="tab-content">
+    <div class="box3">
+      <span class="box-title">Axiom of Choice.</span>
+      <p>$\forall\lambda\in\Lambda , A_\lambda \neq \varnothing$とする．このとき，
+        <center>\(\displaystyle\prod_{\lambda\in\Lambda}A_\lambda\neq\varnothing\)</center>
+        以後，ACと略記する．
+      </p>  
+    </div>
+  
+    <div class="box2">
+      <span class="box-title">Def.</span>
+      <p>
+        <center>$X$:帰納的順序集合\(\overset{\text{def}}{\Longleftrightarrow}\)$X$の任意の全順序部分集合(鎖)が$X$に上界をもつ．</center>
+      </p>  
+    </div>
+
+    <div class="box1">
+      <span class="box-title">Zornの補題．</span>
+      <p>
+        <center> AC \(\Longleftrightarrow\)帰納的順序集合\(X\)に極大元が存在する．</center>
+      </p>  
+    </div>
+
+    <details id=proof> 
+      <summary>Proof.</summary>
+       $(X,\le)$を帰納的半順序集合とし，$f$を$X$上の選択函数とする．\\
+       $(X,\le)$の整列部分集合$W$および，$a\in W$に対して，
+       <center>$\Delta(W,a):= \{x\in X \mid b\in W\langle a \rangle \Longrightarrow b\lt x\}$</center>
+       
+    </details>
+      </div>
+
+      <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">位相空間論</label>
+      <div class="tab-content">
+        <div class="box1">
+          <span class="box-title">Thm.</span>
+          <p>コンパクト集合に含まれる閉集合はコンパクトである．</p>
+        </div>
+        <details id=proof> 
+          <summary>Proof.</summary>
+            $B\subset A \subset X$．  $A$:コンパクト ， $B$:閉集合，とする．<br>
+            $B$の開被覆$\{U_{\lambda}\}_{\lambda\in\Lambda}$に対し，$\{U_{\lambda}\}_{\lambda\in\Lambda}\cup \{X\backslash B\}$は$A$ の開被覆<br>
+            $A$のコンパクト性より，
+            <center>
+              $A\subset \displaystyle\bigcup_{i=1}^n U_{\lambda_i} \cup (X\backslash B)$
+            </center>
+            $(X\backslash B) \cap B = \varnothing$なので，$B\subset \displaystyle\bigcup_{i=1}^n U_{\lambda_i}$
+            $\require{\AMScd}\require{\physics}$
+        </details>
+      </div>
+  </body>
