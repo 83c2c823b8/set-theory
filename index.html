@@ -54,15 +54,33 @@
 
     <details id=proof> 
       <summary>Proof.</summary>
-       $(X,\le)$を帰納的半順序集合とし，$f$を$X$上の選択函数とする．<br>
-       $(X,\le)$の整列部分集合$W$および，$a\in W$に対して，
-       <center>$\Delta(W,a):= \{x\in X \mid b\in W\langle a \rangle \Longrightarrow b\lt x\}$</center>
        
     </details>
       </div>
 
       <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">位相空間論</label>
       <div class="tab-content">
+        <div class="box1">
+          <span class="box-title">Thm.</span>
+          <p>$(X,d_X), (Y,d_Y)$を距離空間とする．</p>
+          <center>$f:X\longrightarrow Y$が連続$\Longleftrightarrow\forall  \ U \in \mathcal O_Y, f^{-1}(U) \in O_X$</center>
+        </div>
+        <details id=proof> 
+          <summary>Proof.</summary>
+            $(\Longrightarrow )$<br>
+            $f^{-1}(U) = \varnothing$ならOK．$f^{-1}(U)\neq\varnothing$とする．<br>
+            $x\in f^{-1}(U)$に対し，$U(\ni f(x))$は開集合なので，
+            <center>$\exists\varepsilon\gt 0, B(f(x),\varepsilon)\subset U$</center>
+            $f$の連続性より，<br>
+            <center>$\exists\delta \gt 0, \mathrm{s.t.} f(B(x,\delta))\subset B(f(x,\varepsilon))\subset U$</center>
+            したがって，
+            <center>$B(x,\delta) \subset f^{-1}(U)$</center>
+            $(\Longleftarrow )$<br>
+            $x\in X$を固定する．$\forall\varepsilon\gt 0, B(f(x),\varepsilon)\in \mathcal O_Y$であり，仮定より$f^{-1}(B(f(x),\varepsilon))\in O_X$<br>
+            $x\in f^{-1}(B(f(x),\varepsilon)$なので，
+            <center>$\exists\delta\gt 0， B(x,\delta) \subset f^{-1}(B(f(x),\varepsilon)$</center>
+            したがって，$f(B(x,\delta))\subset B(f(x),\varepsilon)$
+        </details>
         <div class="box1">
           <span class="box-title">Thm.</span>
           <p>コンパクト集合に含まれる閉集合はコンパクトである．</p>
@@ -78,5 +96,6 @@
             $(X\backslash B) \cap B = \varnothing$なので，$B\subset \displaystyle\bigcup_{i=1}^n U_{\lambda_i}$
             $\require{\AMScd}\require{\physics}$
         </details>
+       
       </div>
   </body>
